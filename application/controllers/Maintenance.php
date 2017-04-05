@@ -1,10 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-class Maintence extends Application
+require APPPATH . '/third_party/restful/libraries/Rest_controller.php';
+class Maintenance extends Rest_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Menu');
 
 	}
 	// Handle an incoming GET ... return a menu item or all of them
